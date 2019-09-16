@@ -16,8 +16,8 @@
                         "customWebpackConfig": {
                             "path": "./wm-custom-webpack.config.js"
                         },
-                        "deployUrl": "ng-bundle/",
-                        "outputPath": "dist/ng-bundle",
+                        "deployUrl": "/",
+                        "outputPath": "dist/",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": "src/polyfills.ts",
