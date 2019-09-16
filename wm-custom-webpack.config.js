@@ -1,4 +1,5 @@
 const CompressionPlugin = require(`compression-webpack-plugin`);
+const BrotliPlugin = require(`brotli-webpack-plugin`);
 const path = require(`path`);
 module.exports = {
     resolve:{
@@ -7,6 +8,10 @@ module.exports = {
         }
     },
     plugins:[
+        new BrotliPlugin({
+            asset: '[path].br[query]',
+            test: /\.(js|css|html|svg|txt|eot|otf|ttf|gif)$/
+        }),
         new CompressionPlugin({
             test: /\.(js|css|html|svg|txt|eot|otf|ttf|gif)$/,
             filename(info){
