@@ -48,8 +48,8 @@
                             "./node_modules/lodash/lodash.min.js",
                             "./node_modules/x2js/x2js.js",
                             "./node_modules/d3/d3.min.js",
-                            "./node_modules/wm-nvd3/build/nv.d3.min.js",
-                            "./node_modules/jquery/dist/jquery.min.js",
+                            {"input":"./node_modules/wm-nvd3/build/nv.d3.min.js","lazy":true},
+                            {"input":"./node_modules/jquery/dist/jquery.min.js","lazy":true},
                             "./node_modules/jquery-ui/ui/disable-selection.js",
                             "./node_modules/jquery-ui/ui/version.js",
                             "./node_modules/jquery-ui/ui/widget.js",
@@ -62,7 +62,7 @@
                             "./node_modules/jquery-ui/ui/widgets/droppable.js",
                             "./node_modules/wm/scripts/datatable/datatable.js",
                             "./node_modules/moment/min/moment-with-locales.min.js",
-                            "./node_modules/fullcalendar/dist/fullcalendar.min.js",
+                            {"input":"./node_modules/fullcalendar/dist/fullcalendar.min.js","lazy":true},
                             "./node_modules/summernote/dist/summernote-lite.min.js",
                             "./node_modules/hammerjs/hammer.min.js",
                             "./node_modules/iscroll/build/iscroll.js",
@@ -176,7 +176,8 @@
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "options": {
-                        "browserTarget": "angular-app:build"
+                        "browserTarget": "angular-app:build",
+                        "proxyConfig": "src/proxy.conf.js"
                     },
                     "configurations": {
                         "production": {
