@@ -1,0 +1,38 @@
+<section wmPartial data-role="partial" role="region"  name="CommonPage"> 
+    <div wmDialog wmLoginDialog  modal="true" name="CommonLoginDialog" iconclass="wi wi-sign-in" title="Login" eventsource.bind="Actions.loginAction" wm-navigable-element="true"><ng-template #dialogBody> 
+        <form wmForm role=""  #form_1 ngNativeValidate [formGroup]="form_1.ngform" [noValidate]="form_1.validationtype !== 'html'"
+                    class="" [class]="form_1.captionAlignClass" [autocomplete]="form_1.autocomplete ? 'on' : 'off'" captionposition=undefined  name="loginform" >
+                         
+            <p wmMessage aria-label="Notification Alerts"  show="false" class="app-login-dialog-message" name="loginmessage"></p> 
+            <div wmLayoutGrid  name="layoutgrid1"> 
+                <div wmLayoutGridRow  name="gridrow1"> 
+                    <div wmLayoutGridColumn  name="gridcolumn1"> 
+                        <div wmComposite role="group"  name="usernamefield"> 
+                            <label wmLabel  class="col-md-3 control-label" caption="Username" name="usernamelabel"></label> 
+                            <div wmContainer partialContainer wmSmoothscroll="false"  class="col-md-9" name="container1"> 
+                                <wm-input  placeholder="Enter username" class="col-md-8 app-login-dialog-username" name="j_username" autocomplete="off" autocorrect="off" updateon="default" autocapitalize="off" formControlName="j_username" wmFormWidget ></wm-input> 
+                            </div> 
+                        </div> 
+                    </div> 
+                </div> 
+                <div wmLayoutGridRow  name="gridrow2"> 
+                    <div wmLayoutGridColumn  name="gridcolumn2"> 
+                        <div wmComposite role="group"  name="passwordfield"> 
+                            <label wmLabel  class="col-md-3 control-label" caption="Password" name="passwordlabel"></label> 
+                            <div wmContainer partialContainer wmSmoothscroll="false"  class="col-md-9" name="container2"> 
+                                <wm-input  type="password" placeholder="Enter password" class="col-md-8 app-login-dialog-password" name="j_password" autocomplete="off" autocorrect="off" updateon="default" autocapitalize="off" formControlName="j_password" wmFormWidget ></wm-input> 
+                            </div> 
+                        </div> 
+                    </div> 
+                </div> 
+            </div> 
+        </form> 
+        <ng-template #dialogFooter><div wmDialogFooter data-identfier="actions" > 
+            <button wmButton  class="btn-primary" caption="Sign in" data-role="loginbutton" click.event="doLogin()"></button> 
+        </div></ng-template> 
+    </ng-template></div> 
+    <div wmAlertDialog role="alertdialog" wm-navigable-element="true"  name="CommonAlertDialog" controller="NotificationDialogController" notificationdialog="alert" message.bind="notification.text" title.bind="notification.title" oktext.bind="notification.okButtonText" alerttype.bind="notification.alerttype" ok.event="notification.onOk()" close.event="notification.onClose()"> 
+    </div> 
+    <div wmConfirmDialog wm-navigable-element="true"  name="CommonConfirmDialog" controller="NotificationDialogController" notificationdialog="confirm" message.bind="notification.text" title.bind="notification.title" oktext.bind="notification.okButtonText" canceltext.bind="notification.cancelButtonText" ok.event="notification.onOk()" cancel.event="notification.onCancel()"> 
+    </div> 
+</section>

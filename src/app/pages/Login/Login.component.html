@@ -1,0 +1,65 @@
+<div wmPage data-role="pageContainer"  layouttype="one-column" columns="1" name="page1" pagetitle="Login">
+  <main wmContent data-role="page-content" role="main"  name="content1" height="100%">
+    <div wmPageContent wmSmoothscroll="true"  columnwidth="12" name="column1" class="login" padding="0px">
+      <div wmContainer partialContainer wmSmoothscroll="false"  class="bg-primary" width="100%" height="100%" backgroundimage="resources/images/imagelists/login-bg.png" backgroundrepeat="no-repeat" backgroundposition="0 0" backgroundsize="100% 100%" backgroundattachment="fixed" name="loginPageContainer">
+        <div wmLayoutGrid  name="loginGrid" height="100%">
+          <div wmLayoutGridRow  name="gridrow7" height="15%">
+            <div wmLayoutGridColumn  columnwidth="12" name="gridcolumn10_2"></div>
+          </div>
+          <div wmLayoutGridRow  name="gridrow6_1">
+            <div wmLayoutGridColumn  columnwidth="12" name="gridcolumn10_1" horizontalalign="center" class="col-xs-12" paddingbottom="2em">
+              <img wmPicture alt="image" wmImageCache="true"  name="picture1" picturesource="resources/images/logos/logo.png" height="6em">
+            </div>
+          </div>
+          <div wmLayoutGridRow  name="loginGridRow">
+            <div wmLayoutGridColumn  columnwidth="3" name="gridcolumn8" class="col-xs-1 col-md-4"></div>
+            <div wmLayoutGridColumn  name="loginContentColumn" columnwidth="6" class="col-xs-10  col-md-4">
+              <div wmContainer partialContainer wmSmoothscroll="false"  name="container1" class="panel" backgroundcolor="#ffffff" color="#bdbdbd">
+                <label wmLabel  name="label1" caption="User Login" horizontalalign="center" class="p" backgroundcolor="#f7f7f7" fontsize="20" color="#1e1e1e" margintop="0px" marginbottom="0px" paddingtop="1em" paddingbottom="1em"></label>
+                <div wmLogin  name="loginForm" title autocomplete="nofill" eventsource.bind="Actions.loginAction">
+                  <form wmForm role="app-login"  #form_2 ngNativeValidate [formGroup]="form_2.ngform" [noValidate]="form_2.validationtype !== 'html'"
+                    class="" [class]="form_2.captionAlignClass" [autocomplete]="form_2.autocomplete ? 'on' : 'off'" captionposition=undefined  >
+                        
+                    <div wmLayoutGrid  name="layoutgrid2">
+                      <div wmLayoutGridRow  name="gridrow2">
+                        <div wmLayoutGridColumn  columnwidth="12" name="gridcolumn4" paddingbottom="1em">
+                          <div wmContainer partialContainer wmSmoothscroll="false"  class="input-group" name="container3">
+                            <div wmContainer partialContainer wmSmoothscroll="false"  class="input-group-addon" name="container4">
+                              <span wmIcon aria-hidden="true"  name="icon1" iconclass="wi wi-user"></span>
+                            </div>
+                            <wm-input  placeholder="Username" name="j_username" class="app-login-username" width="100%" autocomplete="false" autocorrect="off" autocapitalize="off" updateon="default" required="true" formControlName="j_username" wmFormWidget ></wm-input>
+                          </div>
+                        </div>
+                      </div>
+                      <div wmLayoutGridRow  name="gridrow3">
+                        <div wmLayoutGridColumn  columnwidth="12" name="gridcolumn7" paddingbottom="1em">
+                          <div wmContainer partialContainer wmSmoothscroll="false"  class="input-group" name="container3">
+                            <div wmContainer partialContainer wmSmoothscroll="false"  class="input-group-addon" name="container6">
+                              <span wmIcon aria-hidden="true"  name="icon1" iconclass="wi wi-key"></span>
+                            </div>
+                            <wm-input  type="password" name="j_password" placeholder="Password" class="app-login-passworØd" width="100%" autocomplete="true" autocorrect="off" autocapitalize="off" updateon="default" required="true" formControlName="j_password" wmFormWidget ></wm-input>
+                          </div>
+                        </div>
+                      </div>
+                      <div wmLayoutGridRow  name="gridrow6">
+                        <div wmLayoutGridColumn  columnwidth="12" name="gridcolumn14" class="col-xs-12">
+                          <div wmCheckbox role="input"  caption="Remember me" name="j_rememberme" formControlName="j_rememberme" wmFormWidget ></div>
+                        </div>
+                      </div>
+                      <div wmLayoutGridRow  name="gridrow4">
+                        <div wmLayoutGridColumn  columnwidth="12" name="gridcolumn10">
+                          <button wmButton  type="submit" caption="Login" width="100%" class="app-login-button btn-primary" name="loginButton" fontsize="1.2" fontunit="em"></button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div wmLayoutGridColumn  columnwidth="3" name="gridcolumn9" class="col-xs-1  col-md-4"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

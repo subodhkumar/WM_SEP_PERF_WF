@@ -1,0 +1,77 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "baseUrl": "./",
+        "outDir": "./dist/out-tsc",
+        "sourceMap": true,
+        "declaration": false,
+        "module": "es2015",
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "target": "es5",
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+        "lib": [
+            "es2018",
+            "dom"
+        ],
+        "paths": {
+            "@wm/build-task": [
+                "node_modules/wm/build-task/"
+            ],
+            "@wm/mobile-build-task": [
+                "node_modules/wm/mobile-build-task"
+            ],
+            "@wm/core": [
+                "node_modules/wm/core"
+            ],
+            "@wm/components": [
+                "node_modules/wm/components"
+            ],
+            "@wm/transpiler": [
+                "node_modules/wm/transpiler"
+            ],
+            "@wm/security": [
+                "node_modules/wm/security"
+            ],
+            "@swipey": [
+                "node_modules/wm/swipey"
+            ],
+            "@wm/http": [
+                "node_modules/wm/http"
+            ],
+            "@wm/oAuth": [
+                "node_modules/wm/oAuth"
+            ],
+            "@wm/variables": [
+                "node_modules/wm/variables"
+            ],
+            "@wm/mobile/core": [
+                "node_modules/wm/mobile/core"
+            ],
+            "@wm/mobile/components": [
+                "node_modules/wm/mobile/components"
+            ],
+            "@wm/mobile/offline": [
+                "node_modules/wm/mobile/offline"
+            ],
+            "@wm/mobile/variables": [
+                "node_modules/wm/mobile/variables"
+            ],
+            "@wm/runtime/base": [
+                "node_modules/wm/runtime/base"
+            ],
+            "@wm/runtime/dynamic": [
+                "node_modules/wm/runtime/dynamic"
+            ],
+            "@wm/mobile/runtime": [
+                "node_modules/wm/mobile/placeholder"
+            ],
+            "@wm/mobile/placeholder": [
+                "node_modules/wm/mobile/placeholder"
+            ]
+        }
+    }
+}

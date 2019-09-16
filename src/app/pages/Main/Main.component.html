@@ -1,0 +1,213 @@
+<div wmPage data-role="pageContainer"  name="mainpage" pagetitle="Main">
+    <main wmContent data-role="page-content" role="main"  name="content">
+        <div wmPageContent wmSmoothscroll="true"  columnwidth="12" name="mainContent" paddingright="15px" paddingleft="15px">
+            <div wmTable="table_1" wmTableFilterSort wmTableCUD #table_1 data-identifier="table" role="table"  editmode="quickedit" name="DepartmentTable1" title="Department List" dataset.bind="Variables.HrdbDepartmentData.dataSet" navigation="Basic" datasource.bind="Variables.HrdbDepartmentData" isdynamictable="false">
+                <div wmTableColumn  binding="deptId" caption="Dept Id" generator="identity" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true" readonly="true"  [formGroup]="table_1.ngform" >
+                    
+                    
+                    
+                    </div>
+                <div wmTableColumn  binding="name" caption="Name" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"  [formGroup]="table_1.ngform" >
+                    
+                    <ng-template #inlineWidgetTmpl let-row="row" let-getControl="getControl" let-getValidationMessage="getValidationMessage">
+                <div data-col-identifier="name" >
+                     <wm-input #inlineWidget wmFormWidget key="name" data-field-name="name" formControlName="name"   type="text" aria-describedby="Enter text" ></wm-input>
+                     <span placement="top" container="body" tooltip="{{getValidationMessage()}}" class="text-danger wi wi-error"
+                        *ngIf="getValidationMessage() && getControl() && getControl().invalid && getControl().touched">
+                     </span>
+                     <span class="sr-only" *ngIf="getValidationMessage()">{{getValidationMessage()}}</span>
+                 </div>
+            </ng-template>
+                    <ng-template #inlineWidgetTmplNew let-row="row" let-getControl="getControl" let-getValidationMessage="getValidationMessage">
+                <div data-col-identifier="name" >
+                     <wm-input #inlineWidgetNew wmFormWidget key="name" data-field-name="name" formControlName="name_new"   type="text" aria-describedby="Enter text" ></wm-input>
+                     <span placement="top" container="body" tooltip="{{getValidationMessage()}}" class="text-danger wi wi-error"
+                        *ngIf="getValidationMessage() && getControl() && getControl().invalid && getControl().touched">
+                     </span>
+                     <span class="sr-only" *ngIf="getValidationMessage()">{{getValidationMessage()}}</span>
+                 </div>
+            </ng-template>
+                    </div>
+                <div wmTableColumn  binding="budget" caption="Budget" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer"  [formGroup]="table_1.ngform" >
+                    
+                    <ng-template #inlineWidgetTmpl let-row="row" let-getControl="getControl" let-getValidationMessage="getValidationMessage">
+                <div data-col-identifier="budget" >
+                     <div wmNumber #inlineWidget wmFormWidget key="budget" data-field-name="budget" formControlName="budget"   type="number" aria-label="Only numbers" ></div>
+                     <span placement="top" container="body" tooltip="{{getValidationMessage()}}" class="text-danger wi wi-error"
+                        *ngIf="getValidationMessage() && getControl() && getControl().invalid && getControl().touched">
+                     </span>
+                     <span class="sr-only" *ngIf="getValidationMessage()">{{getValidationMessage()}}</span>
+                 </div>
+            </ng-template>
+                    <ng-template #inlineWidgetTmplNew let-row="row" let-getControl="getControl" let-getValidationMessage="getValidationMessage">
+                <div data-col-identifier="budget" >
+                     <div wmNumber #inlineWidgetNew wmFormWidget key="budget" data-field-name="budget" formControlName="budget_new"   type="number" aria-label="Only numbers" ></div>
+                     <span placement="top" container="body" tooltip="{{getValidationMessage()}}" class="text-danger wi wi-error"
+                        *ngIf="getValidationMessage() && getControl() && getControl().invalid && getControl().touched">
+                     </span>
+                     <span class="sr-only" *ngIf="getValidationMessage()">{{getValidationMessage()}}</span>
+                 </div>
+            </ng-template>
+                    </div>
+                <div wmTableColumn  binding="q1" caption="Q1" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer"  [formGroup]="table_1.ngform" >
+                    
+                    <ng-template #inlineWidgetTmpl let-row="row" let-getControl="getControl" let-getValidationMessage="getValidationMessage">
+                <div data-col-identifier="q1" >
+                     <div wmNumber #inlineWidget wmFormWidget key="q1" data-field-name="q1" formControlName="q1"   type="number" aria-label="Only numbers" ></div>
+                     <span placement="top" container="body" tooltip="{{getValidationMessage()}}" class="text-danger wi wi-error"
+                        *ngIf="getValidationMessage() && getControl() && getControl().invalid && getControl().touched">
+                     </span>
+                     <span class="sr-only" *ngIf="getValidationMessage()">{{getValidationMessage()}}</span>
+                 </div>
+            </ng-template>
+                    <ng-template #inlineWidgetTmplNew let-row="row" let-getControl="getControl" let-getValidationMessage="getValidationMessage">
+                <div data-col-identifier="q1" >
+                     <div wmNumber #inlineWidgetNew wmFormWidget key="q1" data-field-name="q1" formControlName="q1_new"   type="number" aria-label="Only numbers" ></div>
+                     <span placement="top" container="body" tooltip="{{getValidationMessage()}}" class="text-danger wi wi-error"
+                        *ngIf="getValidationMessage() && getControl() && getControl().invalid && getControl().touched">
+                     </span>
+                     <span class="sr-only" *ngIf="getValidationMessage()">{{getValidationMessage()}}</span>
+                 </div>
+            </ng-template>
+                    </div>
+                <div wmTableColumn  binding="q2" caption="Q2" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer"  [formGroup]="table_1.ngform" >
+                    
+                    <ng-template #inlineWidgetTmpl let-row="row" let-getControl="getControl" let-getValidationMessage="getValidationMessage">
+                <div data-col-identifier="q2" >
+                     <div wmNumber #inlineWidget wmFormWidget key="q2" data-field-name="q2" formControlName="q2"   type="number" aria-label="Only numbers" ></div>
+                     <span placement="top" container="body" tooltip="{{getValidationMessage()}}" class="text-danger wi wi-error"
+                        *ngIf="getValidationMessage() && getControl() && getControl().invalid && getControl().touched">
+                     </span>
+                     <span class="sr-only" *ngIf="getValidationMessage()">{{getValidationMessage()}}</span>
+                 </div>
+            </ng-template>
+                    <ng-template #inlineWidgetTmplNew let-row="row" let-getControl="getControl" let-getValidationMessage="getValidationMessage">
+                <div data-col-identifier="q2" >
+                     <div wmNumber #inlineWidgetNew wmFormWidget key="q2" data-field-name="q2" formControlName="q2_new"   type="number" aria-label="Only numbers" ></div>
+                     <span placement="top" container="body" tooltip="{{getValidationMessage()}}" class="text-danger wi wi-error"
+                        *ngIf="getValidationMessage() && getControl() && getControl().invalid && getControl().touched">
+                     </span>
+                     <span class="sr-only" *ngIf="getValidationMessage()">{{getValidationMessage()}}</span>
+                 </div>
+            </ng-template>
+                    </div>
+                <div wmTableColumn  binding="q3" caption="Q3" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer"  [formGroup]="table_1.ngform" >
+                    
+                    <ng-template #inlineWidgetTmpl let-row="row" let-getControl="getControl" let-getValidationMessage="getValidationMessage">
+                <div data-col-identifier="q3" >
+                     <div wmNumber #inlineWidget wmFormWidget key="q3" data-field-name="q3" formControlName="q3"   type="number" aria-label="Only numbers" ></div>
+                     <span placement="top" container="body" tooltip="{{getValidationMessage()}}" class="text-danger wi wi-error"
+                        *ngIf="getValidationMessage() && getControl() && getControl().invalid && getControl().touched">
+                     </span>
+                     <span class="sr-only" *ngIf="getValidationMessage()">{{getValidationMessage()}}</span>
+                 </div>
+            </ng-template>
+                    <ng-template #inlineWidgetTmplNew let-row="row" let-getControl="getControl" let-getValidationMessage="getValidationMessage">
+                <div data-col-identifier="q3" >
+                     <div wmNumber #inlineWidgetNew wmFormWidget key="q3" data-field-name="q3" formControlName="q3_new"   type="number" aria-label="Only numbers" ></div>
+                     <span placement="top" container="body" tooltip="{{getValidationMessage()}}" class="text-danger wi wi-error"
+                        *ngIf="getValidationMessage() && getControl() && getControl().invalid && getControl().touched">
+                     </span>
+                     <span class="sr-only" *ngIf="getValidationMessage()">{{getValidationMessage()}}</span>
+                 </div>
+            </ng-template>
+                    </div>
+                <div wmTableColumn  binding="q4" caption="Q4" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer"  [formGroup]="table_1.ngform" >
+                    
+                    <ng-template #inlineWidgetTmpl let-row="row" let-getControl="getControl" let-getValidationMessage="getValidationMessage">
+                <div data-col-identifier="q4" >
+                     <div wmNumber #inlineWidget wmFormWidget key="q4" data-field-name="q4" formControlName="q4"   type="number" aria-label="Only numbers" ></div>
+                     <span placement="top" container="body" tooltip="{{getValidationMessage()}}" class="text-danger wi wi-error"
+                        *ngIf="getValidationMessage() && getControl() && getControl().invalid && getControl().touched">
+                     </span>
+                     <span class="sr-only" *ngIf="getValidationMessage()">{{getValidationMessage()}}</span>
+                 </div>
+            </ng-template>
+                    <ng-template #inlineWidgetTmplNew let-row="row" let-getControl="getControl" let-getValidationMessage="getValidationMessage">
+                <div data-col-identifier="q4" >
+                     <div wmNumber #inlineWidgetNew wmFormWidget key="q4" data-field-name="q4" formControlName="q4_new"   type="number" aria-label="Only numbers" ></div>
+                     <span placement="top" container="body" tooltip="{{getValidationMessage()}}" class="text-danger wi wi-error"
+                        *ngIf="getValidationMessage() && getControl() && getControl().invalid && getControl().touched">
+                     </span>
+                     <span class="sr-only" *ngIf="getValidationMessage()">{{getValidationMessage()}}</span>
+                 </div>
+            </ng-template>
+                    </div>
+                <div wmTableColumn  binding="deptCode" caption="Dept Code" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"  [formGroup]="table_1.ngform" >
+                    
+                    <ng-template #inlineWidgetTmpl let-row="row" let-getControl="getControl" let-getValidationMessage="getValidationMessage">
+                <div data-col-identifier="deptCode" >
+                     <wm-input #inlineWidget wmFormWidget key="deptCode" data-field-name="deptCode" formControlName="deptCode"   type="text" aria-describedby="Enter text" ></wm-input>
+                     <span placement="top" container="body" tooltip="{{getValidationMessage()}}" class="text-danger wi wi-error"
+                        *ngIf="getValidationMessage() && getControl() && getControl().invalid && getControl().touched">
+                     </span>
+                     <span class="sr-only" *ngIf="getValidationMessage()">{{getValidationMessage()}}</span>
+                 </div>
+            </ng-template>
+                    <ng-template #inlineWidgetTmplNew let-row="row" let-getControl="getControl" let-getValidationMessage="getValidationMessage">
+                <div data-col-identifier="deptCode" >
+                     <wm-input #inlineWidgetNew wmFormWidget key="deptCode" data-field-name="deptCode" formControlName="deptCode_new"   type="text" aria-describedby="Enter text" ></wm-input>
+                     <span placement="top" container="body" tooltip="{{getValidationMessage()}}" class="text-danger wi wi-error"
+                        *ngIf="getValidationMessage() && getControl() && getControl().invalid && getControl().touched">
+                     </span>
+                     <span class="sr-only" *ngIf="getValidationMessage()">{{getValidationMessage()}}</span>
+                 </div>
+            </ng-template>
+                    </div>
+                <div wmTableColumn  binding="location" caption="Location" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"  [formGroup]="table_1.ngform" >
+                    
+                    <ng-template #inlineWidgetTmpl let-row="row" let-getControl="getControl" let-getValidationMessage="getValidationMessage">
+                <div data-col-identifier="location" >
+                     <wm-input #inlineWidget wmFormWidget key="location" data-field-name="location" formControlName="location"   type="text" aria-describedby="Enter text" ></wm-input>
+                     <span placement="top" container="body" tooltip="{{getValidationMessage()}}" class="text-danger wi wi-error"
+                        *ngIf="getValidationMessage() && getControl() && getControl().invalid && getControl().touched">
+                     </span>
+                     <span class="sr-only" *ngIf="getValidationMessage()">{{getValidationMessage()}}</span>
+                 </div>
+            </ng-template>
+                    <ng-template #inlineWidgetTmplNew let-row="row" let-getControl="getControl" let-getValidationMessage="getValidationMessage">
+                <div data-col-identifier="location" >
+                     <wm-input #inlineWidgetNew wmFormWidget key="location" data-field-name="location" formControlName="location_new"   type="text" aria-describedby="Enter text" ></wm-input>
+                     <span placement="top" container="body" tooltip="{{getValidationMessage()}}" class="text-danger wi wi-error"
+                        *ngIf="getValidationMessage() && getControl() && getControl().invalid && getControl().touched">
+                     </span>
+                     <span class="sr-only" *ngIf="getValidationMessage()">{{getValidationMessage()}}</span>
+                 </div>
+            </ng-template>
+                    </div>
+                <div wmTableColumn  binding="tenantId" caption="Tenant Id" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer"  [formGroup]="table_1.ngform" >
+                    
+                    <ng-template #inlineWidgetTmpl let-row="row" let-getControl="getControl" let-getValidationMessage="getValidationMessage">
+                <div data-col-identifier="tenantId" >
+                     <div wmNumber #inlineWidget wmFormWidget key="tenantId" data-field-name="tenantId" formControlName="tenantId"   type="number" aria-label="Only numbers" ></div>
+                     <span placement="top" container="body" tooltip="{{getValidationMessage()}}" class="text-danger wi wi-error"
+                        *ngIf="getValidationMessage() && getControl() && getControl().invalid && getControl().touched">
+                     </span>
+                     <span class="sr-only" *ngIf="getValidationMessage()">{{getValidationMessage()}}</span>
+                 </div>
+            </ng-template>
+                    <ng-template #inlineWidgetTmplNew let-row="row" let-getControl="getControl" let-getValidationMessage="getValidationMessage">
+                <div data-col-identifier="tenantId" >
+                     <div wmNumber #inlineWidgetNew wmFormWidget key="tenantId" data-field-name="tenantId" formControlName="tenantId_new"   type="number" aria-label="Only numbers" ></div>
+                     <span placement="top" container="body" tooltip="{{getValidationMessage()}}" class="text-danger wi wi-error"
+                        *ngIf="getValidationMessage() && getControl() && getControl().invalid && getControl().touched">
+                     </span>
+                     <span class="sr-only" *ngIf="getValidationMessage()">{{getValidationMessage()}}</span>
+                 </div>
+            </ng-template>
+                    </div>
+                <div wmTableRowAction  key="deleterow" display-name title="Delete" iconclass="wi wi-trash" show="true" class="btn-transparent" action="deleteRow($event)">
+                        <ng-template #rowActionTmpl let-row="row">
+               <button wmButton data-action-key="deleterow"
+                    caption="" hint="Delete" show="true" 
+                    class="row-action row-action-button btn-transparent delete delete-row-button"
+                    iconclass="wi wi-trash"
+                     click.event.delayed="deleteRow($event)" 
+                    
+                    type="button"></button>
+                
+            </ng-template></div>
+            </div>
+        </div>
+    </main>
+</div>
