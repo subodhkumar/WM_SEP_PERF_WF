@@ -47,9 +47,9 @@
                         "scripts": [
                             "./node_modules/lodash/lodash.min.js",
                             "./node_modules/x2js/x2js.js",
-                            "./node_modules/d3/d3.min.js",
+                            {"input":"./node_modules/d3/d3.min.js","lazy":true},
                             {"input":"./node_modules/wm-nvd3/build/nv.d3.min.js","lazy":true},
-                            {"input":"./node_modules/jquery/dist/jquery.min.js","lazy":true},
+                            "./node_modules/jquery/dist/jquery.min.js",
                             "./node_modules/jquery-ui/ui/disable-selection.js",
                             "./node_modules/jquery-ui/ui/version.js",
                             "./node_modules/jquery-ui/ui/widget.js",
